@@ -10,6 +10,9 @@ import {
   View,
 } from 'react-native';
 
+import Colors from '../constants/Colors'
+
+
 import { MonoText } from '../components/StyledText';
 
 export default function HomeScreen() {
@@ -29,8 +32,8 @@ export default function HomeScreen() {
           />
         </View>
 
-        <Text> WELCOME TO ADMme</Text>
-        <Text> Use me to manage employee</Text>
+        <Text style={styles.Header}> WELCOME TO ADMme</Text>
+        <Text style={styles.subtitle}> Use me to manage your employees</Text>
 
       </ScrollView>
 
@@ -82,6 +85,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    textAlign: 'center'
+
   },
   developmentModeText: {
     marginBottom: 20,
@@ -165,4 +170,15 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#2e78b7',
   },
+
+  Header:{
+    fontSize:30,
+    marginTop:50
+  },
+  subtitle:{
+    fontSize:20,
+    marginTop:20
+
+  },
+
 });
